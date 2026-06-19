@@ -52,4 +52,4 @@ Ce projet a été entièrement repensé pour offrir une expérience utilisateur 
 
 Voici les identifiants de l'administrateur par défaut pour vous connecter au tableau de bord (Dashboard) de votre site :
 - **Email :** `admin@lallabeauty.ma`
-- **Mot de passe :** `admin`
+- **Mot de passe :** `password123`
