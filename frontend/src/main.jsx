@@ -14,6 +14,16 @@ import { WishlistProvider } from './context/WishlistContext.jsx';
 import { CompareProvider } from './context/CompareContext.jsx';
 import { RecentlyViewedProvider } from './context/RecentlyViewedContext.jsx';
 import { NotificationProvider } from './context/NotificationContext.jsx';
+import axios from 'axios';
+
+// Vercel Monorepo Configuration
+// Intercept all /api calls and route them to the backend service prefix when in production
+axios.interceptors.request.use((config) => {
+  if (import.meta.env.PROD && config.url && config.url.startsWith('/api')) {
+    config.url = `/_/backend${config.url}`;
+  }
+  return config;
+});
 
 const queryClient = new QueryClient({
   defaultOptions: {
