@@ -47,3 +47,9 @@ Ce projet a été entièrement repensé pour offrir une expérience utilisateur 
 
 ---
 *Créé avec passion pour sublimer la beauté naturelle.* ✨
+
+## 🔐 Accès Administrateur (Admin)
+
+Voici les identifiants de l'administrateur par défaut pour vous connecter au tableau de bord (Dashboard) de votre site :
+- **Email :** `admin@lallabeauty.com`
+- **Mot de passe :** `admin`
