@@ -80,15 +80,17 @@ export const getProductRecommendations = async (req, res) => {
 // @desc    Create a product
 // @route   POST /api/products
 export const createProduct = async (req, res) => {
+  const { name, price, description, stock, category, image } = req.body;
+
   const product = new Product({
-    name: 'Sample name',
-    price: 0,
+    name: name || 'Nouveau Produit',
+    price: price || 0,
     user: req.user._id,
-    image: '/images/sample.jpg',
-    category: req.body.category || null,
-    countInStock: 0,
+    image: image || '/images/placeholder.jpg',
+    category: category || null,
+    countInStock: stock || 0,
     numReviews: 0,
-    description: 'Sample description',
+    description: description || 'Description du produit',
   });
 
   const createdProduct = await product.save();
